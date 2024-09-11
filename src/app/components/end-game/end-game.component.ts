@@ -1,4 +1,4 @@
-import { Component, Inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Inject } from '@angular/core';
 import {
   MatDialogModule,
   MAT_DIALOG_DATA,
@@ -11,6 +11,7 @@ import { Observable } from 'rxjs';
 @Component({
   selector: 'app-end-game-dialog',
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [CommonModule, MatDialogModule, MatButtonModule],
   template: `
     <div class="end-game-dialog">

@@ -5,6 +5,7 @@ import {
   EventEmitter,
   OnChanges,
   SimpleChanges,
+  ChangeDetectionStrategy,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
@@ -14,6 +15,7 @@ import { Card, ResourceType, StarWarsItem, Winner } from '../../models/models';
 @Component({
   selector: 'app-battle',
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [CommonModule, MatCardModule],
   template: `
     <div class="battle-container" data-cy="battle-container">
